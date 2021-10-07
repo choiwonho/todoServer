@@ -55,7 +55,8 @@ public class TodoController {
         List<TodoModel> list = this.service.searchAll();
         List<TodoResponse> responses = list.stream().map(TodoResponse::new)
                 .collect(Collectors.toList());
-            return ResponseEntity.ok(responses);
+
+        return ResponseEntity.ok(responses);
 
     }
 
